@@ -70,7 +70,7 @@
             
                 <li><a href="#installation">Installation</a></li>
             
-                <li><a href="#configuration">Configuration</a></li>
+                <li><a href="#theme%20configuration">Theme Configuration</a></li>
             
                 <li><a href="#license">License</a></li>
             
@@ -323,9 +323,7 @@ theme = <span style="color:#009c00">&#34;uwe-uwe&#34;</span>
     
         
     
-        <h2 id="configuration">Configuration</h2>
-<h3 id="hugo-specific-configuration-parameters">Hugo-Specific Configuration Parameters</h3>
-<h3 id="custom-configuration-parameters">Custom Configuration Parameters</h3>
+        <h2 id="theme-configuration">Theme Configuration</h2>
 <p>All custom configuration parameters have to be set in the <code>params.uweuwe</code> section of the configuration file of your website-project.</p>
 
 
@@ -464,7 +462,7 @@ theme = <span style="color:#009c00">&#34;uwe-uwe&#34;</span>
 
 
 </div>
-<h4 id="metadata">Metadata</h4>
+<h3 id="metadata">Metadata</h3>
 <p>You can specify different information that serve as metadata for your website.</p>
 
 
@@ -586,7 +584,7 @@ theme = <span style="color:#009c00">&#34;uwe-uwe&#34;</span>
 
 
 </div>
-<h4 id="logo">Logo</h4>
+<h3 id="logo">Logo</h3>
 <p>The logo is displayed at the top of the website.</p>
 <p>If you don&rsquo;t want to display the logo just set the value of the <code>logo.display</code> parameter to <code>false</code>.</p>
 
@@ -712,7 +710,7 @@ theme = <span style="color:#009c00">&#34;uwe-uwe&#34;</span>
 
 
 </div>
-<h4 id="short-description">Short Description</h4>
+<h3 id="short-description">Short Description</h3>
 <p>The short description is displayed below the title of your website.</p>
 <p>If you don&rsquo;t want to display the short description just set the value of the <code>shortDesc.display</code> parameter to <code>false</code>.</p>
 
@@ -838,7 +836,7 @@ theme = <span style="color:#009c00">&#34;uwe-uwe&#34;</span>
 
 
 </div>
-<h4 id="platform-links">Platform Links</h4>
+<h3 id="platform-links">Platform Links</h3>
 <p>The platform links are displayed below the short description of the website.</p>
 <p>You can choose between the following display modes:</p>
 <ul>
@@ -1016,7 +1014,7 @@ theme = <span style="color:#009c00">&#34;uwe-uwe&#34;</span>
 
 
 </div>
-<h4 id="table-of-contents">Table of Contents</h4>
+<h3 id="table-of-contents">Table of Contents</h3>
 
 
 
@@ -1156,8 +1154,8 @@ The table of contents is created automatically based upon the <code>title</code>
 
 
 </div>
-<h4 id="markdown-render-hooks">Markdown Render Hooks</h4>
-<p>The Uwe Uwe (u²) theme uses 
+<h3 id="markdown-render-hooks">Markdown Render Hooks</h3>
+<p>Per default the Uwe Uwe (u²) theme uses 
     <span class="link-wrapper">
         <a
             
@@ -1169,6 +1167,291 @@ The table of contents is created automatically based upon the <code>title</code>
         <img src="./assets/img/icons/external-link-icon.svg" height="12" width="12" />
     </span>
  to alter the HTML output of images, links and headings.</p>
+<p>However, you can deactivate their usage in the following way:</p>
+
+
+
+
+<div class="tabs-container" id="code-block-tabbed-10">
+    <div class="tablist" role="tablist">
+        
+            <a 
+                role="tab" 
+                class="tab  active " 
+                id="code-block-tabbed-10-tab-1" 
+                href="#code-block-tabbed-10-tabpane-1"
+            >
+                JSON
+            </a>
+        
+            <a 
+                role="tab" 
+                class="tab " 
+                id="code-block-tabbed-10-tab-2" 
+                href="#code-block-tabbed-10-tabpane-2"
+            >
+                Yaml
+            </a>
+        
+            <a 
+                role="tab" 
+                class="tab " 
+                id="code-block-tabbed-10-tab-3" 
+                href="#code-block-tabbed-10-tabpane-3"
+            >
+                Toml
+            </a>
+        
+    </div>
+
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+    
+    aria-labelledby="code-block-tabbed-10-tab-1"
+    role="tabpanel"
+    class="tabpanel "
+    id="code-block-tabbed-10-tabpane-1"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript">{
+    params: {
+        uweuwe: {
+            renderHooks: {
+                image: {
+                    use: <span style="color:#00f">false</span>,
+                },
+                link: {
+                    use: <span style="color:#00f">false</span>,
+                },
+                heading: {
+                    use: <span style="color:#00f">false</span>,
+                }
+            }
+        }
+    }
+}
+</code></pre></div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+     aria-hidden="true" 
+    aria-labelledby="code-block-tabbed-10-tab-2"
+    role="tabpanel"
+    class="tabpanel  hidden "
+    id="code-block-tabbed-10-tabpane-2"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">params:
+    uweuwe:
+        renderHooks: 
+            image:
+                use: <span style="color:#00f">false</span>
+            link:
+                use: <span style="color:#00f">false</span>
+            heading:
+                use: <span style="color:#00f">false</span>
+</code></pre></div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+     aria-hidden="true" 
+    aria-labelledby="code-block-tabbed-10-tab-3"
+    role="tabpanel"
+    class="tabpanel  hidden "
+    id="code-block-tabbed-10-tabpane-3"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-TOML" data-lang="TOML">[params]
+    [params.uweuwe]
+        [params.uweuwe.renderHooks]
+            [params.uweuwe.renderHooks.image]
+                use = <span style="color:#00f">false</span>
+            [params.uweuwe.renderHooks.link]
+                use = <span style="color:#00f">false</span>
+            [params.uweuwe.renderHooks.heading]
+                use = <span style="color:#00f">false</span>
+
+</code></pre></div>
+</div>
+
+
+</div>
+<h3 id="syntax-highlighting-via-prismjs">Syntax Highlighting via Prism.js</h3>
+<p>Instead of Hugo&rsquo;s custom 
+    <span class="link-wrapper">
+        <a
+            
+            href="https://gohugo.io/content-management/syntax-highlighting/"
+            target="_blank"
+        >
+            syntax highlighter
+        </a>
+        <img src="./assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+ you can also choose the Javascript-based syntax highlighter 
+    <span class="link-wrapper">
+        <a
+            
+            href="https://prismjs.com/"
+            target="_blank"
+        >
+            Prism.js
+        </a>
+        <img src="./assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+.</p>
+
+
+
+
+<div class="tabs-container" id="code-block-tabbed-11">
+    <div class="tablist" role="tablist">
+        
+            <a 
+                role="tab" 
+                class="tab  active " 
+                id="code-block-tabbed-11-tab-1" 
+                href="#code-block-tabbed-11-tabpane-1"
+            >
+                JSON
+            </a>
+        
+            <a 
+                role="tab" 
+                class="tab " 
+                id="code-block-tabbed-11-tab-2" 
+                href="#code-block-tabbed-11-tabpane-2"
+            >
+                Yaml
+            </a>
+        
+            <a 
+                role="tab" 
+                class="tab " 
+                id="code-block-tabbed-11-tab-3" 
+                href="#code-block-tabbed-11-tabpane-3"
+            >
+                Toml
+            </a>
+        
+    </div>
+
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+    
+    aria-labelledby="code-block-tabbed-11-tab-1"
+    role="tabpanel"
+    class="tabpanel "
+    id="code-block-tabbed-11-tabpane-1"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript">{
+    params: {
+        uweuwe: {
+            syntaxHiglighingCustom: {
+                use: <span style="color:#00f">true</span>,
+            }
+        }
+    }
+}
+</code></pre></div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+     aria-hidden="true" 
+    aria-labelledby="code-block-tabbed-11-tab-2"
+    role="tabpanel"
+    class="tabpanel  hidden "
+    id="code-block-tabbed-11-tabpane-2"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">params:
+    uweuwe:
+        syntaxHiglighingCustom: 
+            use: <span style="color:#00f">true</span>
+</code></pre></div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+     aria-hidden="true" 
+    aria-labelledby="code-block-tabbed-11-tab-3"
+    role="tabpanel"
+    class="tabpanel  hidden "
+    id="code-block-tabbed-11-tabpane-3"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-TOML" data-lang="TOML">[params]
+    [params.uweuwe]
+        [params.uweuwe.syntaxHiglighingCustom]
+            use = <span style="color:#00f">true</span>
+</code></pre></div>
+</div>
+
+
+</div>
+<p>Please note that activating the Prism.js based syntax higlighting will cause the loading of additional Javascript and CSS files.</p>
 
     
 
