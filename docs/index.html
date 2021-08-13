@@ -70,6 +70,8 @@
             
                 <li><a href="#installation">Installation</a></li>
             
+                <li><a href="#hugo%20configuration">Hugo Configuration</a></li>
+            
                 <li><a href="#theme%20configuration">Theme Configuration</a></li>
             
                 <li><a href="#license">License</a></li>
@@ -315,9 +317,408 @@ theme = <span style="color:#009c00">&#34;uwe-uwe&#34;</span>
     </span>
  directly to the <code>/themes</code> directory of your website-project.</p>
 <h3 id="git-submodule">Git submodule</h3>
-<p>You can add the Uwe Uwe (u²) theme as a git submodule by cloning it directly to the <code>/themes</code> directory of your website project using the following command:</p>
+<p>Should you use 
+    <span class="link-wrapper">
+        <a
+            
+            href="https://en.wikipedia.org/wiki/Git"
+            target="_blank"
+        >
+            Git
+        </a>
+        <img src="./assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+ to track changes within your website-project you can also add the Uwe Uwe (u²) theme as a git submodule by cloning it directly to the <code>/themes</code> directory of your website-project using the following command:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">git submodule add https://github.com/mbrt-yeah/uwe-uwe-hugo.git themes/uwe-uwe
 </code></pre></div>
+    
+
+    
+        
+    
+        <h2 id="hugo-configuration">Hugo Configuration</h2>
+<p>The recommended Hugo configuration when you are using the Uwe Uwe (u²) theme.</p>
+<h3 id="disable-creation-of-contents">Disable creation of contents</h3>
+<p>In order not to clutter the build-result with unnecessary files you can disable the creation of section, taxonomy, term and RSS contents using the 
+    <span class="link-wrapper">
+        <a
+            
+            href="https://gohugo.io/getting-started/configuration/#disablekinds"
+            target="_blank"
+        >
+            disableKinds
+        </a>
+        <img src="./assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+ option in your project configuration file.</p>
+
+
+
+
+<div class="tabs-container" id="code-block-tabbed-12">
+    <div class="tablist" role="tablist">
+        
+            <a 
+                role="tab" 
+                class="tab  active " 
+                id="code-block-tabbed-12-tab-1" 
+                href="#code-block-tabbed-12-tabpane-1"
+            >
+                JSON
+            </a>
+        
+            <a 
+                role="tab" 
+                class="tab " 
+                id="code-block-tabbed-12-tab-2" 
+                href="#code-block-tabbed-12-tabpane-2"
+            >
+                Yaml
+            </a>
+        
+            <a 
+                role="tab" 
+                class="tab " 
+                id="code-block-tabbed-12-tab-3" 
+                href="#code-block-tabbed-12-tabpane-3"
+            >
+                Toml
+            </a>
+        
+    </div>
+
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+    
+    aria-labelledby="code-block-tabbed-12-tab-1"
+    role="tabpanel"
+    class="tabpanel "
+    id="code-block-tabbed-12-tabpane-1"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript">{
+    disableKinds: [<span style="color:#009c00">&#34;section&#34;</span>, <span style="color:#009c00">&#34;taxonomy&#34;</span>, <span style="color:#009c00">&#34;term&#34;</span>, <span style="color:#009c00">&#34;RSS&#34;</span>]
+}
+</code></pre></div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+     aria-hidden="true" 
+    aria-labelledby="code-block-tabbed-12-tab-2"
+    role="tabpanel"
+    class="tabpanel  hidden "
+    id="code-block-tabbed-12-tabpane-2"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">disableKinds:
+   - <span style="color:#009c00">&#34;section&#34;</span>
+   - <span style="color:#009c00">&#34;taxonomy&#34;</span>
+   - <span style="color:#009c00">&#34;term&#34;</span>
+   - <span style="color:#009c00">&#34;RSS&#34;</span>
+</code></pre></div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+     aria-hidden="true" 
+    aria-labelledby="code-block-tabbed-12-tab-3"
+    role="tabpanel"
+    class="tabpanel  hidden "
+    id="code-block-tabbed-12-tabpane-3"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-TOML" data-lang="TOML">disableKinds = [<span style="color:#009c00">&#34;section&#34;</span>, <span style="color:#009c00">&#34;taxonomy&#34;</span>, <span style="color:#009c00">&#34;term&#34;</span>, <span style="color:#009c00">&#34;RSS&#34;</span>]
+</code></pre></div>
+</div>
+
+
+</div>
+<h3 id="markup-related-configurations">Markup related configurations</h3>
+<p>For markdown in notifications and sidenotes to be correctly displayed you have to set the 
+<code>markup.goldmark.renderer.unsafe</code> flag to <code>true</code>.</p>
+
+
+
+
+<div class="tabs-container" id="code-block-tabbed-13">
+    <div class="tablist" role="tablist">
+        
+            <a 
+                role="tab" 
+                class="tab  active " 
+                id="code-block-tabbed-13-tab-1" 
+                href="#code-block-tabbed-13-tabpane-1"
+            >
+                JSON
+            </a>
+        
+            <a 
+                role="tab" 
+                class="tab " 
+                id="code-block-tabbed-13-tab-2" 
+                href="#code-block-tabbed-13-tabpane-2"
+            >
+                Yaml
+            </a>
+        
+            <a 
+                role="tab" 
+                class="tab " 
+                id="code-block-tabbed-13-tab-3" 
+                href="#code-block-tabbed-13-tabpane-3"
+            >
+                Toml
+            </a>
+        
+    </div>
+
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+    
+    aria-labelledby="code-block-tabbed-13-tab-1"
+    role="tabpanel"
+    class="tabpanel "
+    id="code-block-tabbed-13-tabpane-1"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript">{
+    markup: {
+        goldmark: {
+            renderer: {
+                unsafe: <span style="color:#00f">true</span>
+            }
+        }
+    }
+}
+</code></pre></div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+     aria-hidden="true" 
+    aria-labelledby="code-block-tabbed-13-tab-2"
+    role="tabpanel"
+    class="tabpanel  hidden "
+    id="code-block-tabbed-13-tabpane-2"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">markup:
+   goldmark:
+       renderer:
+           unsafe: <span style="color:#00f">true</span>
+</code></pre></div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+     aria-hidden="true" 
+    aria-labelledby="code-block-tabbed-13-tab-3"
+    role="tabpanel"
+    class="tabpanel  hidden "
+    id="code-block-tabbed-13-tabpane-3"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-TOML" data-lang="TOML">[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = <span style="color:#00f">true</span>
+</code></pre></div>
+</div>
+
+
+</div>
+<p>Furthermore, it has been found that the <code>igor</code> style of 
+    <span class="link-wrapper">
+        <a
+            
+            href="https://gohugo.io/content-management/syntax-highlighting/"
+            target="_blank"
+        >
+            Hugo&rsquo;s internal syntax highlighter
+        </a>
+        <img src="./assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+ works best with the design of the Uwe Uwe (u²) theme.</p>
+
+
+
+
+<div class="tabs-container" id="code-block-tabbed-14">
+    <div class="tablist" role="tablist">
+        
+            <a 
+                role="tab" 
+                class="tab  active " 
+                id="code-block-tabbed-14-tab-1" 
+                href="#code-block-tabbed-14-tabpane-1"
+            >
+                JSON
+            </a>
+        
+            <a 
+                role="tab" 
+                class="tab " 
+                id="code-block-tabbed-14-tab-2" 
+                href="#code-block-tabbed-14-tabpane-2"
+            >
+                Yaml
+            </a>
+        
+            <a 
+                role="tab" 
+                class="tab " 
+                id="code-block-tabbed-14-tab-3" 
+                href="#code-block-tabbed-14-tabpane-3"
+            >
+                Toml
+            </a>
+        
+    </div>
+
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+    
+    aria-labelledby="code-block-tabbed-14-tab-1"
+    role="tabpanel"
+    class="tabpanel "
+    id="code-block-tabbed-14-tabpane-1"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript">{
+    markup: {
+        goldmark: {
+            highlight: {
+                style: <span style="color:#009c00">&#34;igor&#34;</span>
+            }
+        }
+    }
+}
+</code></pre></div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+     aria-hidden="true" 
+    aria-labelledby="code-block-tabbed-14-tab-2"
+    role="tabpanel"
+    class="tabpanel  hidden "
+    id="code-block-tabbed-14-tabpane-2"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">markup:
+   goldmark:
+       highlight:
+           style: igor
+</code></pre></div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+     aria-hidden="true" 
+    aria-labelledby="code-block-tabbed-14-tab-3"
+    role="tabpanel"
+    class="tabpanel  hidden "
+    id="code-block-tabbed-14-tabpane-3"
+>
+    <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-TOML" data-lang="TOML">[markup]
+    [markup.goldmark]
+        [markup.goldmark.highlight]
+            style = <span style="color:#009c00">&#34;igor&#34;</span>
+</code></pre></div>
+</div>
+
+
+</div>
+
     
 
     
